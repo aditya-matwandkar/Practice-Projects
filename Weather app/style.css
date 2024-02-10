@@ -1,0 +1,129 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans';
+}
+
+.full-body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container{
+    width: 650px;
+    height: 600px;
+    border-radius: 40px;
+    /* background-image: linear-gradient(to right bottom, #75adff, #3acdfd, #68e4e5, #b0f4d0, #f0ffcf); */
+    background-image: linear-gradient(to left bottom, #0948a5, #4548b7, #7243c4, #9e35cc, #c90bcc);
+    padding: 5px;
+}
+
+.search{
+    width: 650px;
+    height: 50px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    height: 50px;
+    width: 420px;
+    border-radius: 22px;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    outline: none;
+    text-overflow: ellipsis;
+    border: 2px solid #2f55ff;
+    box-shadow: 0px 0px 2px 0px #454545;
+    background-color: #fafafa;
+    font-family: Poppins;
+}
+
+.search-button{
+    height: 40px;
+    width: 90px;
+    background-color: #d5eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 7px 0px #454545;
+    transition-duration: 150ms;
+    font-family: Poppins;
+}
+
+.search-button:hover{
+    background-color: #123f45;
+    color: #f0f0f0;
+}
+
+.temperature{
+    width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.temperature img{
+    height: 150px;
+}
+
+.temp-in-c{
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.city-name{
+    font-size: 2rem;
+    margin: 0;
+    font-family: Poppins;
+}
+
+.other-info{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-around;
+}
+
+.other-info img{
+    height: 60px;
+}
+
+.wind > img{
+    margin-left: 32px;
+}
+
+.humidity > img{
+    margin-left: 4px;
+}
+
+.info-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-txt{
+    font-size: 1.5rem;
+}
+
+.info-txt + p{
+    font-size: 1.2rem;
+}
+
+.temp-in-c, .city-name, .other-info{
+    color: white;
+    /* color: rgb(35, 35, 35); */
+}

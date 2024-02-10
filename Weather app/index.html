@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- open sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-body">
+        <div id="container">
+            <section class="search">
+                <input type="text" placeholder="Enter city name">
+                <div class="search-button">Search</div>
+            </section>
+            <section class="temperature">
+                <img src="images/clear.png" alt="rain">
+                <h1 class="temp-in-c">0°C</h1>
+                <h2 class="city-name">City</h2>
+            </section>
+            <section class="other-info">
+                <div class="humidity">
+                    <img src="images/humidity.png" alt="humidity img">
+                    <div class="info-center">
+                        <p class="humi-perc info-txt">0%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <img src="images/wind.png" alt="humidity img">
+                    <div class="info-center">
+                        <p class="wind-spd info-txt">0.0km/hr</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
