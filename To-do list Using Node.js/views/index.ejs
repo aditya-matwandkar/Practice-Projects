@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do Task</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Exo+2:ital,wght@0,400;1,500&family=Kanit&family=Libre+Baskerville&family=Mooli&family=Open+Sans&family=Oxygen&family=Patrick+Hand&family=Playpen+Sans&family=Rubik&family=Source+Code+Pro:ital,wght@1,500&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <div>
+        <form action="/" id="form" class="form input" method="POST">
+            <input id="input-text" type="text" name="task" placeholder="Add your task here..." />
+            <label>
+                <div class="add"><img src="Add_round.png" alt="add icon" /></div>
+                <button type="submit" class="add-btn"></button>
+            </label>
+        </form>
+      </div>
+
+      <ul class="task-list">
+        <% if (locals.taskList) { %>
+          <% if (taskList.length !== 0) { %>
+            <% taskList.forEach((task) => { %>
+              <li class="task">
+                <div class="checked"><div class=""></div></div>
+                <div class="text">
+                  <%= task.name %>
+                </div>
+                <form action="/delete" class="form-del" method="POST">
+                  <label>
+                    <input type="checkbox" name="checkbox"  class="no-display" value="<%= task._id %>" onChange="this.form.submit()">
+                    <div class="delete"><img src="Trash.png" alt="delete icon" /></div>
+                  </label>
+                </form>
+              </li>
+            <% }); %>
+          <% } else { %>
+            <p class="empty-task">No task to do.</p>
+          <% } %>
+        <% } %>
+      </ul>
+    </div>
+
+    <script>
+      document.querySelectorAll(".checked").forEach(task => task.addEventListener("click", function() {
+        this.firstChild.classList.toggle("checked-click");
+        this.nextElementSibling.classList.toggle("del-line");
+      }));
+    </script>
+  </body>
+</html>

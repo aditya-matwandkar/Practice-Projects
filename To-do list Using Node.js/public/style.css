@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+/* full body */
+.main{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* input text bar */
+input{
+    height: 50px;
+    width: 410px;
+    border-radius: 32px;
+    border: 1.5px solid #666666;
+    padding: 0px 15px;
+    font-size: 17px;  
+    font-family: 'open sans';
+    outline: none;
+    text-overflow: ellipsis;
+}
+
+/* input div  */
+.input{
+    margin: 0 auto;
+    margin-top: 5.5rem;
+    height: 55px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* task adding div (cricle)  */
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    background-color: #213555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 150ms;
+}
+
+.add:hover{
+    background-color: #11204b;
+    /* box-shadow: 0px 0px 7px 0px #454545; */
+    transition-delay: 5ms;
+}
+
+.add > img{
+    height: 37px;
+}
+
+.add-btn{
+    display: none;
+}
+
+/* list of all task  */
+.task-list{
+    width: 500px;
+    height: 400px;
+    background-color: #213555;
+    margin: 0 auto;
+    margin-top: 60px;
+    border-radius: 15px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 10px 0 0 0;
+    overflow: scroll;
+}
+
+.task-list::-webkit-scrollbar {
+    width: 0;
+    height: 6px;
+}
+
+.task{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 70px;
+    width: 480px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* check the completeness of task */
+
+.checked{
+    height: 20px;
+    width: 20px;
+    border: 2px solid rgb(137, 137, 137);
+    border-radius: 50%;
+    margin: 0 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checked-click{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    background-color: #7DD87D;
+}
+
+.text{
+    font-size: 18px;
+    font-family: 'open sans';
+}
+
+/* task checked */
+.del-line{
+    color: #666666;
+    text-decoration: line-through;
+}
+
+/* delete the task */
+.delete{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -25px;
+    position: absolute;
+    right: 5.5px;
+    cursor: pointer;
+}
+
+.delete:hover{
+    border: 2px solid #fd3c3c;
+    right: 3.8px;
+    margin-top: -26.5px;
+    transition-delay: 5ms;
+}
+
+.delete > img{
+    height: 30px;
+}
+
+.no-display{
+    display: none;
+}
+
+/* task list when empty  */
+.empty-task{
+    color: white;
+    font-family: 'open sans';
+    font-size: 1.3rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
