@@ -1,1 +1,1 @@
-<h3>Basic Projects (Not Responsive)</h3>
+<h3>Basic Projects</h3>
